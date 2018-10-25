@@ -1,0 +1,10 @@
+If we read the arm cortex m4 instruction set manual, there are some restrictions
+mentioned with the use of IF-THEN-ELSE and one of them says "each instruction 
+inside the IT block must specify a condition code suffix that is either the same
+ or logical inverse".
+
+In code-2, the instructions inside the IF-THEN-ELSE block have a condition code 
+suffix'LT'which is consistent with the 'IT' condition. However in code-1, there 
+is no condition suffix with the instructions inside if then else block. That's 
+why there is an error "Specified condition is not consistent with previous IT".
+
