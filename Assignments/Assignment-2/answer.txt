@@ -11,5 +11,5 @@ there is an error "Specified condition is not consistent with previous IT".
 
 Also, While using IF-THEN-ELSE the condition code suffix for ELSE statements 
 must be inverse of THEN statements. For example GE is inverse of LT as can be 
-seen in code-2.
+seen in code-2. 
 
