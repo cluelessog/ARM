@@ -27,4 +27,43 @@ minimum exponent.
     0                    1.0 * 2^emin
                    Numberline representation
                    
-3.)
+3.) Out of the five methods defined by IEEE for rounding off the floating point
+numbers, the first two rules round to the nearest value and the other three are
+called directed rounding.
+a.) Round to nearest, ties to even
+    If a number lies midway, it is often rounded to the nearest value with an
+    even least significant digit.
+    Example : +9.5 -> +10.0
+              +10.5-> +10.0
+              -9.5 -> -10.0
+              -10.5-> -10.0
+    The nonzero digit of a number that is farthest left is called most
+    significant digit, and the nonzero digit farthest right is called the Least
+    significant digit.
+b.) Round to nearest, ties away from zero
+    If a number lies midway, it is rounded to the nearest value above if it is a
+    positive number or below if it is a negative number.
+    Example : +9.5 -> +10.0
+              +10.5-> +11.0
+              -9.5 -> -10.0
+              -10.5-> -11.0
+c.) Rounding toward 0
+    The number is directly rounded toward 0.  
+    Example : +9.5 -> +9.0
+              +10.5-> +10.0
+              -9.5 -> -9.0
+              -10.5-> -10.0
+d.) Rounding toward +∞
+    The number is directly rounded toward positive infinity. It is also known as
+    rounding up or ceiling.
+    Example : +9.5 -> +10.0
+              +10.5-> +11.0
+              -9.5 -> -9.0
+              -10.5-> -10.0
+e.) Rounding toward -∞
+    The number is directly rounded toward negative infinity. It is also known as
+    rounding down or floor.
+    Example : +9.5 -> +9.0
+              +10.5-> +10.0
+              -9.5 -> -10.0
+              -10.5-> -11.0       
