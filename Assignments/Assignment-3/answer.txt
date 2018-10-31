@@ -10,7 +10,9 @@ Mantissa - 1.101
 implicit leading bit - 1
 fraction bits - .101
 Precision - 4 (containing 4 bits i.e one leading bit and three fraction bits)
-Precision is important to avoid loss of information.
+Precision is important to avoid loss of information. The single precision has
+23 bits whereas double precision has 52 bits. So more is the number of fractional
+bits, more is the precision.
 
 2.) In the IEEE754 standard, the floating point numbers are stored as binary
 scientific notation given as " x = M * 2^e ". Here the 'M' stands for mantissa
@@ -18,7 +20,8 @@ and 'e' stands for the exponent. Now the exponent can be chosen in a way so that
 1 <= M < 2 or we can write in a general way 1 <= M < B, where "B" stands for
 radix/base. So there are numbers which are bigger than zero but smaller than
 1.0 * 2^emin. Those numbers are called the subnormal numbers. It is basically a
-non-zero floating point number which has a magnitude less than the magnitude of smallest normal number.
+non-zero floating point number which has a magnitude less than the magnitude of
+smallest normal number. All the exponent bits and leading hidden bits are zero.
 Normal number is a non-zero floating point number with a magnitude greater than
 or equal to minimum value B^emin, where B is the radix/base and "emin is the 
 minimum exponent.
