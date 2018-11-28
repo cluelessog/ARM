@@ -147,7 +147,7 @@ loop2	LDRB r4, [r3,#0x1]!	;r4 to store current data to be encoded
 HAMMINGDEC	LDR r3, =0x200000ea 	;Start address to read the hamming encoded data
 		SUB r3, r3, #1				;Index hack
 		MOV r11, #0					;counter
-		LDR r12,=0x20000104 		;start address to store the final decripted data
+		LDR r12,=0x20000104 		;start address to store the final decoded data
 		SUB r12, r12, #1			;Index hack
 decoderead	LDRB r4, [r3,#0x1]!		;r4 to store current data to be decoded 
 		LDRB r5, [r3,#0x1]!			;Operations to read back 12 bit in correct order
